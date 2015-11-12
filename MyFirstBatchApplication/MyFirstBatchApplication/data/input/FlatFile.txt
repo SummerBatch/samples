@@ -1,0 +1,5 @@
+1;FlatFile1;FlatFile1;20100101
+2;FlatFile2;FlatFile2;19700731
+3;FlatFile3;FlatFileDesc3;19690420
+4;FlatFile4;FlatFile4;20070928
+5;FlatFile5;FlatFileDesc5;20151109

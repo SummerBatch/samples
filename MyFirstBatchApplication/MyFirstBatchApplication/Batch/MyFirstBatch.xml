@@ -1,0 +1,12 @@
+﻿<job id="FLATFILE_READER_DB_WRITER"
+  xmlns="http://www.summerbatch.com/xmlns"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.summerbatch.com/xmlns http://www.summerbatch.com/xmlns/SummerBatchXML_1_0.xsd">
+  <step id="FlatFileReader">
+    <chunk item-count="1000">
+      <reader ref="FlatFileReader/FlatFileReader" />
+      <processor ref="FlatFileReader/Processor" />
+      <writer ref="FlatFileReader/DatabaseWriter" />
+    </chunk>
+  </step>
+</job>
