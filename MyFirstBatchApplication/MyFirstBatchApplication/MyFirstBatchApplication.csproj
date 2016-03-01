@@ -100,6 +100,7 @@
     <Compile Include="Service\FlatFileRecordProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="data\input\sort_test.txt" />
     <None Include="App.config" />
     <Content Include="data\input\FlatFile.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -109,20 +110,16 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+    <None Include="Settings.config" />
+    <None Include="SummerBatch-CustomSortTasklet.docx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Batch\MyFirstBatch.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="data\input\LargeFlatFile.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SampleBatchDatabase.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SampleBatchDatabase_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>SampleBatchDatabase.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
