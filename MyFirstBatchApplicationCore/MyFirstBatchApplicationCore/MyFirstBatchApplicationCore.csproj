@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!--(Based on the SummerbatchCore version) -->
+		<PackageReference Include="SummerBatchCore" Version="3.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.9" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="3.1.9" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.9" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Xml" Version="3.1.9" />
+		<PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+		<PackageReference Include="NLog" Version="5.0.0-beta11" />
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
+		<PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+		<PackageReference Include="System.ServiceModel.Primitives" Version="4.7.0" />
+		<PackageReference Include="System.Text.Encoding.CodePages" Version="4.7.1" />
+		<PackageReference Include="Unity.NetCore" Version="4.0.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="App.config">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<!--(Based on the batch job xml path) -->
+		<None Update="Batch\MyFirstBatch.xml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<!--(Based on the input file if needed) -->
+		<None Update="data\input\FlatFile.txt">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="NLog.config">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="packages.config">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<!--(Based on the service-based Database if needed) -->
+		<None Update="SampleBatchDatabase.mdf">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<!--(Based on the service-based Database if needed) -->
+		<None Update="SampleBatchDatabase_log.ldf">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Properties\" />
+	</ItemGroup>
+
+</Project>
