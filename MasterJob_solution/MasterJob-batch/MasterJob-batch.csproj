@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>MasterJob_batch</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Batch\.vshistory\**" />
+    <EmbeddedResource Remove="Batch\.vshistory\**" />
+    <None Remove="Batch\.vshistory\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+    <PackageReference Include="System.ServiceModel.Primitives" Version="4.8.1" />
+    <PackageReference Include="Unity.NetCore" Version="4.0.3" />
+  </ItemGroup>
+    <ItemGroup>
+    <ProjectReference Include="D:\git\SummerBatchCore\Summer.Batch.Common\Summer.Batch.Common.csproj" />
+    <ProjectReference Include="D:\git\SummerBatchCore\Summer.Batch.Core\Summer.Batch.Core.csproj" />
+    <ProjectReference Include="D:\git\SummerBatchCore\Summer.Batch.Data\Summer.Batch.Data.csproj" />
+    <ProjectReference Include="D:\git\SummerBatchCore\Summer.Batch.Extra\Summer.Batch.Extra.csproj" />
+    <ProjectReference Include="D:\git\SummerBatchCore\Summer.Batch.Infrastructure\Summer.Batch.Infrastructure.csproj" />
+
+</ItemGroup>
+    <ItemGroup>
+      <Compile Update="SqlQueries.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>SqlQueries.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Update="SqlQueries.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>SqlQueries.Designer.cs</LastGenOutput>
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        <CustomToolNamespace>BA_DB_WRITER_batch</CustomToolNamespace>
+      </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+      <None Update="Batch\BA_DB_WRITER.xml">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="ConnectionStrings.config">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="NLog.config">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>

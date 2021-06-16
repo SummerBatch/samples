@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<job id="BA_DB_WRITER" xmlns="http://www.summerbatch.com/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.summerbatch.com/xmlns http://www.summerbatch.com/xmlns/SummerBatchXML_1_0.xsd">
+	<step id="step2">
+		<remote-chunking
+			hostname="localhost"
+			workerFileName="Worker.xml"
+			workerMaxNumber="2"
+			maxMasterWaitWorkerRetry="3"
+			maxMasterWaitWorkerSecond="5">
+		</remote-chunking>
+		<chunk item-count="1000">
+			<reader ref="step2/ReadEmployee" />
+			<processor ref="step2/Processor" />
+			<writer ref="step2/WriteEmployee" />
+		</chunk>
+	</step>
+</job>
