@@ -11,13 +11,13 @@
 
 	<ItemGroup>
 		<!--(Based on the SummerbatchCore version) -->
-		<PackageReference Include="SummerBatchCore" Version="3.0.1" />
 		<PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.9" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="3.1.9" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.9" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.Xml" Version="3.1.9" />
 		<PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
 		<PackageReference Include="NLog" Version="5.0.0-beta11" />
+		<PackageReference Include="SummerBatchCore" Version="3.0.3" />
 		<PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
 		<PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
 		<PackageReference Include="System.ServiceModel.Primitives" Version="4.7.0" />
