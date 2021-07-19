@@ -28,6 +28,7 @@ namespace MyFirstBatchApplication.Batch
         {
             //Connection string
             var writerConnectionstring = ConfigurationManager.ConnectionStrings["Default"];
+            container.RegisterInstance<ConnectionStringSettings>("Default", writerConnectionstring);
 
             //input file
             var inputFileResource = new FileSystemResource("data/input/LargeFlatFile.txt");
@@ -58,7 +59,7 @@ namespace MyFirstBatchApplication.Batch
 
             // Writer - FlatFileReader/DatabaseWriter
             container.StepScopeRegistration<IItemWriter<FlatFileRecord>, DatabaseBatchItemWriter<FlatFileRecord>>("FlatFileReader/DatabaseWriter")
-                .Property("ConnectionString").Instance(writerConnectionstring)
+                .Property("ConnectionString").Reference<ConnectionStringSettings>("Default")
                 .Property("Query").Value("INSERT INTO BA_FLATFILE_READER_TABLE (CODE,NAME,DESCRIPTION,DATE) VALUES (:code,:name,:description,:date)")
                 .Property("DbParameterSourceProvider").Reference<PropertyParameterSourceProvider<FlatFileRecord>>()
                 .Register();

@@ -95,19 +95,19 @@
       <HintPath>..\packages\NLog.4.1.2\lib\net45\NLog.dll</HintPath>
     </Reference>
     <Reference Include="Summer.Batch.Common, Version=1.2.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SummerBatch.1.2.5\lib\net461\Summer.Batch.Common.dll</HintPath>
+      <HintPath>..\packages\SummerBatch.1.2.6\lib\net461\Summer.Batch.Common.dll</HintPath>
     </Reference>
     <Reference Include="Summer.Batch.Core, Version=1.2.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SummerBatch.1.2.5\lib\net461\Summer.Batch.Core.dll</HintPath>
+      <HintPath>..\packages\SummerBatch.1.2.6\lib\net461\Summer.Batch.Core.dll</HintPath>
     </Reference>
     <Reference Include="Summer.Batch.Data, Version=1.2.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SummerBatch.1.2.5\lib\net461\Summer.Batch.Data.dll</HintPath>
+      <HintPath>..\packages\SummerBatch.1.2.6\lib\net461\Summer.Batch.Data.dll</HintPath>
     </Reference>
     <Reference Include="Summer.Batch.Extra, Version=1.2.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SummerBatch.1.2.5\lib\net461\Summer.Batch.Extra.dll</HintPath>
+      <HintPath>..\packages\SummerBatch.1.2.6\lib\net461\Summer.Batch.Extra.dll</HintPath>
     </Reference>
     <Reference Include="Summer.Batch.Infrastructure, Version=1.2.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SummerBatch.1.2.5\lib\net461\Summer.Batch.Infrastructure.dll</HintPath>
+      <HintPath>..\packages\SummerBatch.1.2.6\lib\net461\Summer.Batch.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
